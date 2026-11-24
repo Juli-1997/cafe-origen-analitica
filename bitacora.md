@@ -24,3 +24,48 @@
 #--4--El cliente C01 aparece en varias ventas y compra el mismo producto en diferentes fechas.
 #-Problema: Si se eliminan registros únicamente porque tienen el mismo cliente y producto, se podrían perder ventas legítimas.
 #-Decisión: Conservar todos los registros, ya que cada uno tiene un identificador de venta diferente. Antes de eliminar duplicados se deberá verificar el identificador y la información completa de cada operación.
+
+
+PRUEBAS DE LAS FUNCIONES
+
+Se probaron las funciones utilizando tres tipos de entradas:
+- El arreglo completo.
+- Un arreglo con una sola venta.
+- Un arreglo vacío.
+
+RESULTADOS DE LOS CASOS BORDE:
+
+1. valorVenta: recibe una venta individual, por lo tanto no se prueba con un arreglo vacío.
+2. totalVendido: devuelve 0 cuando no existen ventas.
+3. totalUnidades: devuelve 0 cuando no existen ventas.
+4. ventaMayorValor: devuelve null porque no existe una venta mayor.
+5. promedioPorVenta: devuelve 0 porque no hay ventas válidas para calcular el promedio.
+6. ventasDeCiudad: devuelve 0 porque no existen ventas de esa ciudad.
+
+Los resultados obtenidos en las pruebas coinciden con los resultados esperados.
+
+-TABLAS DE TRAZA MANUAL
+Traza 1: totalVendido()
+
+| Paso | Venta | Operación | Total |
+| Inicio | - | Inicializar en 0 | 0 |
+| 1 | A | 2 * 5000 | 10000 |
+| 2 | B | 3 * 8000 | 34000 |
+| 3 | C | 1 * 6000 | 40000 |
+
+Resultado final: 40000.
+
+Traza 2: promedioPorVenta()
+| Paso | Venta | Acumulador | Contador |
+| Inicio | - | 0 | 0 |
+| 1 | A | 10000 | 1 |
+| 2 | B | 34000 | 2 |
+| 3 | C | 40000 | 3 |
+
+Operación final: 40000 / 3 = 13333.33
+Resultado final: 13333.33.
+
+COMPROBACIÓN:
+Los resultados de las trazas manuales coinciden
+con los resultados obtenidos al ejecutar el programa.
+
