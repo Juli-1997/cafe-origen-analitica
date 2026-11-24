@@ -252,6 +252,12 @@ function topProductosPorValor(ventas, k) {
   }));
 }
 
+
+//Esta función recibe el arreglo de ventas y una fecha, y devuelve únicamente las ventas de ese día.
+function ventasDelDia(ventas, fecha) {
+  return ventas.filter(venta => venta.fecha === fecha);
+}
+
 //Funciones
 
 module.exports = {
@@ -266,7 +272,8 @@ module.exports = {
   ventasPorCiudadM,
   totalPorCiudad,
   unidadesPorProducto,
-  topProductosPorValor
+  topProductosPorValor,
+  ventasDelDia
 };
 
 

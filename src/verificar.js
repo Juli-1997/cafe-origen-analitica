@@ -48,3 +48,21 @@ console.log("\nORDEN ORIGINAL DE VENTAS:");
 console.log(
   JSON.stringify(ventas) === ventasOriginales ? "OK" : "DIFERENTE"
 );
+
+//Prueba de letras mayus y minus
+const ventasPrueba = [
+  {
+    producto: "Café",
+    ciudad: "Bogotá",
+    cantidad: 1,
+    precio: 10000
+  },
+  {
+    producto: "Café",
+    ciudad: "bogotá ",
+    cantidad: 2,
+    precio: 10000
+  }
+];
+
+console.log(analitica.totalPorCiudad(ventasPrueba));

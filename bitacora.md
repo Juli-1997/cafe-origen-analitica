@@ -116,10 +116,18 @@ con los resultados obtenidos al ejecutar el programa.
 - Utilizo el operador de propagación para copiar el arreglo antes de ordenarlo.
 
 COMPROBACIÓN:
-Se compararon las funciones con ciclos y las funciones
-con métodos de arreglos utilizando los mismos datos.
-
+Se compararon las funciones con ciclos y las funciones con métodos de arreglos utilizando los mismos datos.
 Los resultados deben coincidir y mostrar OK.
+También se comprobó que el arreglo original de ventas, conserva su orden después de ejecutar las funciones.
 
-También se comprobó que el arreglo original de ventas
-conserva su orden después de ejecutar las funciones.
+
+---Reto 4----
+---Depuración 1: Bogotá aparecía dos veces
+Que pasa?: Bogotá aparecía como dos ciudades diferentes en el reporte.
+Entrada que lo produce: Ventas con los nombres "Bogotá" y "bogotá ".
+Hipótesis: El programa estaba agrupando las ciudades sin eliminar espacios ni unificar mayúsculas y minúsculas.
+Prueba realizada: Se creó un arreglo con dos ventas, una con ciudad "Bogotá" y otra con ciudad "bogotá ". Se ejecutó totalPorCiudad().
+Causa: Se utilizaba el texto original de la ciudad como clave del objeto, por lo que se creaban grupos diferentes.
+Corrección: Se utilizó trim() para quitar espacios y toLowerCase() para unificar las letras. Después se convirtió la primera letra a mayúscula.
+
+Resultado: Las dos ventas quedaron agrupadas en una sola ciudad: Bogotá, con un total de $30.000.
