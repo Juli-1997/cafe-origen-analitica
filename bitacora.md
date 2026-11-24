@@ -69,3 +69,57 @@ COMPROBACIÓN:
 Los resultados de las trazas manuales coinciden
 con los resultados obtenidos al ejecutar el programa.
 
+-----RETO 3----------------------
+1. totalVendidoM(ventas)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas con cantidad mayor que 0.
+- ¿Qué transformo? Cada venta en su valor monetario usando map.
+- ¿Qué acumulo? El dinero de todas las ventas usando reduce.
+- ¿Cómo agrupo? No agrupa, calcula un total general.
+
+2. unidadesVendidasM(ventas)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas con cantidad mayor que 0.
+- ¿Qué transformo? Cada venta en su cantidad.
+- ¿Qué acumulo? Las unidades vendidas.
+- ¿Cómo agrupo? No agrupa, calcula el total de unidades.
+
+3. ventasPorCiudadM(ventas, ciudad)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas válidas que pertenezcan a la ciudad indicada.
+- ¿Qué transformo? Cada venta en su valor monetario.
+- ¿Qué acumulo? El dinero vendido en esa ciudad.
+- ¿Cómo agrupo? Compara los nombres de las ciudades normalizados.
+
+4. totalPorCiudad(ventas)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas con cantidad mayor que 0.
+- ¿Qué transformo? El nombre de la ciudad a un formato uniforme.
+- ¿Qué acumulo? El dinero vendido por ciudad.
+- ¿Cómo agrupo? Utilizo un objeto como diccionario para guardar el total de cada ciudad.
+
+5. unidadesPorProducto(ventas)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas con cantidad mayor que 0.
+- ¿Qué transformo? Identifico el nombre de cada producto.
+- ¿Qué acumulo? Las unidades vendidas de cada producto.
+- ¿Cómo agrupo? Utilizo el nombre del producto como clave de un objeto.
+
+6. topProductosPorValor(ventas, k)
+- ¿Qué recorro? Todas las ventas.
+- ¿Qué filtro? Ventas con cantidad mayor que 0.
+- ¿Qué transformo? Calculo el valor monetario de cada venta.
+- ¿Qué acumulo? El dinero generado por cada producto.
+- ¿Cómo agrupo? Utilizo un objeto como diccionario.
+- Ordeno los productos de mayor a menor utilizando sort.
+- Utilizo slice para seleccionar los primeros k productos.
+- Utilizo el operador de propagación para copiar el arreglo antes de ordenarlo.
+
+COMPROBACIÓN:
+Se compararon las funciones con ciclos y las funciones
+con métodos de arreglos utilizando los mismos datos.
+
+Los resultados deben coincidir y mostrar OK.
+
+También se comprobó que el arreglo original de ventas
+conserva su orden después de ejecutar las funciones.
